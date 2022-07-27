@@ -17,22 +17,30 @@ var ideaCards = []
 
 
 //Event listeners
-saveButton.addEventListener('click', saveCard)
+saveButton.addEventListener('click', checkInputs)
 saveButton.addEventListener('click', clearInputs)
 
 
 
 
 //Functions
+function checkInputs() {
+  if (titleInput.value === '') {return} else if (bodyInput.value === '') {return} else {saveCard()}
+  event.preventDefault()
+}
+
+
 function saveCard() {
  currentTitle = titleInput.value
  currentBody = bodyInput.value
  var newIdea = new Idea(currentTitle, currentBody)
  event.preventDefault()
  ideaCards.push(newIdea)
+ console.log(newIdea)
 }
 
 function clearInputs() {
   titleInput.value = ''
   bodyInput.value = ''
+  event.preventDefault()
 }
