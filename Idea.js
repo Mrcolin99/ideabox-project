@@ -3,18 +3,18 @@ class Idea {
         this.title =
         this.body =
         this.starred = 
+        this.id = 
+    }
+
+    saveToStorage () {
 
     }
 
-    saveToStorage (){
+    deleteFromStorage() {
 
     }
 
-    deleteFromStorage(){
+    updateIdea() {
 
-    }
-
-    updateIdea(){
-        
     }
 }
