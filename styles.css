@@ -46,6 +46,7 @@
 
   .grid {
   display: flex;
+  flex-flow:column-wrap;
   background-color: #EAEAF4;
   width: 500px;
   height: 700px;
@@ -56,6 +57,46 @@
   padding: 5px 60px 5px 60px;
   }
 
+  .card {
+    background:#FFFFFF;
+
+  }
+
+  .card-header {
+    background:#1F1F3D;
+    font-size:12px;
+    margin-bottom:20px;
+    display:flex;
+  }
+
+  .card-title {
+    color:#1F1F3D;
+    font-size:15px;
+    padding: 1em;
+  }
+
+  .card-body {
+
+  }
+
+  .card-footer {
+
+  }
+
+  svg {
+    height:30px;
+    width:30px;
+
+  }
+
+  .delete {
+    align-self:flex-end;
+    color:white;
+  }
+
+  .star + .delete {
+    margin-left: 27rem;
+  }
 
 /* Text
 Header: Open Sans, Bold
