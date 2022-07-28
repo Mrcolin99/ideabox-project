@@ -11,19 +11,30 @@ var searchIdeaBox = document.querySelector('.align-search')
 var currentTitle
 var currentBody
 
-titleInput.innerText = titleInput.value
 //Arrays
 var ideaCards = []
 
 
 //Event listeners
-saveButton.addEventListener('click', checkInputs)
-saveButton.addEventListener('click', clearInputs)
+window.addEventListener('load', doNothing)
+titleInput.addEventListener('input', checkInputs)
+bodyInput.addEventListener('input', checkInputs)
+saveButton.addEventListener('click', saveCard)
+
 
 //Functions
 function checkInputs() {
-  if (titleInput.value === '') {return} else if (bodyInput.value === '') {return} else {saveCard()}
-  event.preventDefault()
+  if (titleInput.value === '' || bodyInput.value === '') {
+    doNothing()
+  } else {enableButton()}
+}
+
+function doNothing() {
+  saveButton.disabled = true
+}
+
+function enableButton() {
+  saveButton.disabled = false
 }
 
 function saveCard() {
@@ -32,8 +43,8 @@ function saveCard() {
  var newIdea = new Idea(currentTitle, currentBody)
  event.preventDefault()
  ideaCards.push(newIdea)
- console.log(newIdea)
  showIdeaCards()
+ clearInputs()
 }
 
 function clearInputs() {
