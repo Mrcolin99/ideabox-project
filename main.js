@@ -8,18 +8,21 @@ var grid = document.querySelector('.card')
 
 var searchIdeaBox = document.querySelector('.align-search')
 
+var cardStar = document.querySelector('.star')
+
 var currentTitle
 var currentBody
 
 //Arrays
 var ideaCards = []
-
+var favCards = []
 
 //Event listeners
 window.addEventListener('load', doNothing)
 titleInput.addEventListener('input', checkInputs)
 bodyInput.addEventListener('input', checkInputs)
 saveButton.addEventListener('click', saveCard)
+cardStar.addEventListener('click', favoriteThisCard)
 
 
 //Functions
@@ -64,4 +67,11 @@ function showIdeaCards() {
  <div class="card-body">${ideaCards[i].body}</div>
  <div class="card-footer"><img src="./assets/comment.svg" viewBox="0 0 19.71 19.71"><defs><style>.cls-1{fill:#fff;stroke:#353567;stroke-miterlimit:10;}.cls-2{fill:#353567;}</style></defs><title>abacus-v1Artboard 41</title><g id="background"><circle class="cls-1" cx="9.76" cy="9.76" r="5.58"/><polygon class="cls-2" points="5.65 9.37 5.65 10.14 9.37 10.14 9.37 13.86 10.14 13.86 10.14 10.14 13.86 10.14 13.86 9.37 10.14 9.37 10.14 5.65 9.37 5.65 9.37 9.37 5.65 9.37"/></g></svg> Comment</div>`
   }
- } 
+ }
+
+function favoriteThisCard() {
+  for(var i = 0; i < ideaCards.length; i++) {
+    favCards.push(ideaCards[i])
+  }
+  console.log(favCards)
+}
