@@ -1,12 +1,12 @@
 class Idea {
-    constructor() {
-        this.title =
-        this.body =
-        this.starred = 
-        this.id = 
+    constructor(title, body) {
+        this.title = title
+        this.body = body
+        this.starred = false
+        this.id = Date.now()
     }
 
-    saveToStorage () {
+    saveToStorage() {
 
     }
 
