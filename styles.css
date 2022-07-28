@@ -1,85 +1,134 @@
+.white-font {
+  color: #E9E9F3;
+  background-color: #1F1F3D;
+}
+.lBlue-font {
+  color: #BFBFDD
+}
+
+.lBlue-bg {
+  background-color: #5356A4;
+}
+
+.nav-bar {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+width: 150px;
+height: 1000px;
+float: left;
+background-color: #1F1F3D;
+}
+
+.input-field {
+background-color: #A0AAD2;
+color: #1F1F3D;
+font-weight: bold;
+}
+
+.text-alignment {
+display: flex;
+flex-direction: column;
+align-items: center;
+/* padding: 5px 300px 20px 450px; */
+}
+
+label {
+align-self: flex-start;
+}
+
+.align-search {
+justify-content: center;
+background-image: url(assets/search.svg);
+}
+
+.grid {
+display: flex;
+flex-flow:column-wrap;
+background-color: #EAEAF4;
+width: 500px;
+height: 700px;
+border: 1px solid green;
+}
+
+.save-button {
+padding: 5px 60px 5px 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:repeat(auto-fit, min(300px, 1fr));
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.card {
+  background:#FFFFFF;
+
+}
+
+.card-header {
+  background:#1F1F3D;
+  font-size:12px;
+  margin-bottom:20px;
+  display:flex;
+}
+
+.card-title {
+  color:#1F1F3D;
+  font-size:15px;
+  padding: 1em;
+}
+
+.card-body {
+
+}
+
+.card-footer {
+
+}
+
+svg {
+  height:30px;
+  width:30px;
+
+}
+
+.delete {
+  align-self:flex-end;
+  color:white;
+}
+
+.star + .delete {
+  margin-left: 27rem;
+}
+
 /* Text
 Header: Open Sans, Bold
 Body and label: Open Sans, Light */
 
 /* Colors
 Main
-  DarK blue: #1F1F3D
-  Lite blue: #A0AAD2
-  White: #EAEAF4
+DarK blue: #1F1F3D
+Lite blue: #A0AAD2
+White: #EAEAF4
 
 Ideacards
-  DarK blue top: #1F1F3D
-  white BG: #FFFFFF
-  Dark blue text: #1F1F3D
-  Comment white: #E9E9F3
-  light blue bottom: #5356A4
+DarK blue top: #1F1F3D
+white BG: #FFFFFF
+Dark blue text: #1F1F3D
+Comment white: #E9E9F3
+light blue bottom: #5356A4
 
 Navbar
-  Ideabox White: #E9E9F3
-  border bar blue: #353567
-  Starred Ideas text: #BFBFDD
-  button text white: #E9E49F3
-  Button box blue: #5356A4
-  BG dark blue: #1F1F3D */
+Ideabox White: #E9E9F3
+border bar blue: #353567
+Starred Ideas text: #BFBFDD
+button text white: #E9E49F3
+Button box blue: #5356A4
+BG dark blue: #1F1F3D */
 
-  /* * {
-    border: 1px blue solid;
-  } */
-
-  .white-font {
-    color: #E9E9F3;
-    background-color: #1F1F3D;
-  }
-  .lBlue-font {
-    color: #BFBFDD
-  }
-
-  .lBlue-bg {
-    background-color: #5356A4;
-  }
-
-.nav-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 150px;
-  height: 1000px;
-  float: left;
-  background-color: #1F1F3D;
-}
-
-.input-field {
-  background-color: #A0AAD2;
-  color: #1F1F3D;
-  font-weight: bold;
-}
-
-.text-alignment {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* padding: 5px 300px 20px 450px; */
-}
-
-label {
-  align-self: flex-start;
-}
-
-.align-search {
-  justify-content: center;
-  background-image: url(assets/search.svg);
-}
-
-.grid {
-  display: flex;
-  background-color: #EAEAF4;
-  width: 500px;
-  height: 700px;
-  border: 1px solid green;
-}
-
-.save-button {
-  padding: 5px 60px 5px 60px;
-}
+/* * {
+  border: 1px blue solid;
+} */
