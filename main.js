@@ -1,4 +1,5 @@
 //Variables
+var bubbleParent = document.querySelector('body')
 var starredIdeasButton = document.querySelector('.starredIdea')
 
 var titleInput = document.getElementById('idea-title')
@@ -8,21 +9,28 @@ var grid = document.querySelector('.card')
 
 var searchIdeaBox = document.querySelector('.align-search')
 
-var cardStar = document.querySelector('.star')
 
 var currentTitle
 var currentBody
+
 
 //Arrays
 var ideaCards = []
 var favCards = []
 
 //Event listeners
+bubbleParent.addEventListener('click', clickHandler)
 window.addEventListener('load', doNothing)
 titleInput.addEventListener('input', checkInputs)
 bodyInput.addEventListener('input', checkInputs)
 saveButton.addEventListener('click', saveCard)
-cardStar.addEventListener('click', favoriteThisCard)
+
+//Event Handlers
+function clickHandler(event) {
+  if (event.target.classList.contains('star')) {favoriteThisCard()}
+  if (event.target.classList.contains('delete')) {deleteThisCard()}
+}
+
 
 
 //Functions
@@ -70,8 +78,21 @@ function showIdeaCards() {
  }
 
 function favoriteThisCard() {
+  var newFavorite = event.target.closest('.card')
   for(var i = 0; i < ideaCards.length; i++) {
-    favCards.push(ideaCards[i])
+    if (favCards.includes(newFavorite.id)) {
+      return
+    } else {favCards.push(ideaCards[i])}
   }
+  showIdeaCards()
+  console.log(favCards)
+}
+
+function deleteThisCard() {
+  var deletedCard = event.target.closest('.card')
+  for(var i = 0; i < ideaCards.length; i++) {
+    ideaCards.splice(i,1)
+  }
+  showIdeaCards()
   console.log(favCards)
 }
