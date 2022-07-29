@@ -44,36 +44,35 @@ background-image: url(assets/search.svg);
 }
 
 .grid {
-display: flex;
-flex-flow:column-wrap;
+  display: grid;
+  font-family: 'open sans';
+  grid-area: cardsContainer;
+  background-color: #EAEAF4;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+/* display:flex;
+justify-content: space-between;
 background-color: #EAEAF4;
-width: 500px;
-height: 700px;
-border: 1px solid green;
+border: 1px solid green; */
 }
 
 .save-button {
 padding: 5px 60px 5px 60px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns:repeat(auto-fit, min(300px, 1fr));
-  gap: 1rem;
-  align-items: flex-start;
-}
-
 .card {
+  display: flex;
+  flex-direction: column;
   background:#FFFFFF;
   width:200px
-
 }
 
 .card-header {
   background:#1F1F3D;
   font-size:12px;
   margin-bottom:20px;
-  display:flex;
 }
 
 .card-title {
@@ -93,11 +92,9 @@ padding: 5px 60px 5px 60px;
 img {
   height:30px;
   width:30px;
-
 }
 
 .delete {
-  align-self:flex-end;
   color:white;
   float: right;
 }
