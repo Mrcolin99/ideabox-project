@@ -37,18 +37,36 @@ html {
   background-color: #A0AAD2;
   color: #1F1F3D;
   font-weight: bold;
+  border: solid red 1px;
 }
 
 .text-alignment {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: solid green 1px;
   /* padding: 5px 300px 20px 450px; */
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  border: solid purple 1px;
+}
+
+.search-bar {
+  display: flex;
+}
+
+form {
+  margin-left: 10em;
+  padding: 1em;
+}
+
 label {
-  align-self: flex-start;
-  margin-left: 240px;
+  /* align-self: flex-start;
+  margin-left: 240px; */
+  font-size: 12px;
 }
 
 .search{
@@ -57,8 +75,8 @@ label {
 }
 
 .align-search {
-  justify-content: center;
-  background-image: url(assets/search.svg);
+  /* justify-content: center;
+  background-image: url(assets/search.svg); */
 }
 
 .save-button {
