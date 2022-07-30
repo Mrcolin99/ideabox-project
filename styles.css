@@ -66,6 +66,7 @@ html {
 
 .search-bar {
   display: flex;
+
 }
 
 form {
@@ -82,11 +83,17 @@ label {
 .search{
   justify-content:flex-start;
   background-color:#1F1F3D;
+  height: 15px;
+  width: 15px;
+  padding: 5.5px;
+
 }
 
 .align-search {
   /* justify-content: center;
   background-image: url(assets/search.svg); */
+  height:20px;
+  width:225px;
 }
 
 .save-button {
@@ -111,7 +118,6 @@ border: 1px solid green; */
 .card {
   display: flex;
   flex-direction: column;
-  background:#FFFFFF;
   width:200px;
 }
 
@@ -141,6 +147,7 @@ border: 1px solid green; */
   margin-left: 16px;
   margin-right: 20px;
   margin-bottom: 20px;
+  
 }
 
 img {
@@ -154,7 +161,12 @@ img {
 }
 
 .card-footer{
+  color: #E9E9F3;
+  font-weight: bold;
   background-color:#5356A4;
   border-color:#1F1F3D;
   border: solid 1px;
+  margin: auto;
+  font-size: 12px;
+
 }
