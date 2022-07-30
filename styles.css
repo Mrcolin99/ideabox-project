@@ -6,6 +6,7 @@ html {
 .white-font {
   color: #E9E9F3;
   background-color: #1F1F3D;
+  font-weight: bold;
 }
 
 .filter-sec {
@@ -28,9 +29,24 @@ html {
   align-items: flex-start;
   width: 150px;
   height: 1000px;
-  padding: 10px;
+  /* padding: 10px; */
   float: left;
   background-color: #1F1F3D;
+}
+
+.navBox {
+  border:1px solid #353567;
+  padding: 10px 40px 5px 50px;
+  
+}
+
+.filterBox {
+  margin:auto;
+  padding-top:1px;
+  padding-bottom:15px;
+  padding-left: 5px;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 .input-field {
@@ -80,7 +96,7 @@ label {
   font-size: 12px;
 }
 
-.search{
+.search {
   justify-content:flex-start;
   background-color:#1F1F3D;
   height: 15px;
@@ -137,13 +153,13 @@ border: 1px solid green; */
   padding: 1em;
 }
 
-.card-content{
+.card-content {
   background-color:#FFFFFF;
   border-color:#1F1F3D;
   border: solid 1px;
 }
 
-.card-body{
+.card-body {
   margin-left: 16px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -160,7 +176,7 @@ img {
   float: right;
 }
 
-.card-footer{
+.card-footer {
   color: #E9E9F3;
   font-weight: bold;
   background-color:#5356A4;
