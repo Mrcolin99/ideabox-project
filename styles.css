@@ -111,6 +111,7 @@ label {
 
 .save-button {
   padding: 5px 60px 5px 60px;
+  cursor: pointer;
 }
 
 .grid {
