@@ -6,6 +6,10 @@ class Idea {
         this.id = Date.now()
     }
 
+    favoriteThis() {
+        this.starred === true
+    }
+
     saveToStorage() {
 
     }
