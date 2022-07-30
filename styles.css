@@ -1,10 +1,20 @@
+html {
+  font-family: 'open sans', sans-serif;
+
+}
+
 .white-font {
   color: #E9E9F3;
   background-color: #1F1F3D;
 }
 
-.lBlue-font {
-  color: #BFBFDD
+.filter-sec {
+  border: solid 2px;
+  border-color: #353567;
+  color: #BFBFDD;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
 }
 
 .lBlue-bg {
@@ -12,33 +22,30 @@
 }
 
 .nav-bar {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-width: 150px;
-height: 1000px;
-float: left;
-background-color: #1F1F3D;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 150px;
+  height: 1000px;
+  padding: 10px;
+  float: left;
+  background-color: #1F1F3D;
 }
 
 .input-field {
-background-color: #A0AAD2;
-color: #1F1F3D;
-font-weight: bold;
+  background-color: #A0AAD2;
+  color: #1F1F3D;
+  font-weight: bold;
+  border: solid red 1px;
 }
 
 .text-alignment {
-display: flex;
-flex-direction: column;
-align-items: center;
-/* padding: 5px 300px 20px 450px; */
-}
-
-label {
-margin-top: 20px;
-align-self: flex-start;
-margin-left: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid green 1px;
+  /* padding: 5px 300px 20px 450px; */
 }
 
 #idea-title {
@@ -51,14 +58,35 @@ margin-left: 180px;
   width:250px;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  border: solid purple 1px;
+}
+
+.search-bar {
+  display: flex;
+}
+
+form {
+  margin-left: 10em;
+  padding: 1em;
+}
+
+label {
+  /* align-self: flex-start;
+  margin-left: 240px; */
+  font-size: 12px;
+}
+
 .search{
   justify-content:flex-start;
   background-color:#1F1F3D;
 }
 
 .align-search {
-justify-content: center;
-background-image: url(assets/search.svg);
+  /* justify-content: center;
+  background-image: url(assets/search.svg); */
 }
 
 .save-button {
@@ -67,8 +95,8 @@ background-image: url(assets/search.svg);
 
 .grid {
   display: grid;
-  font-family: 'open sans';
-  grid-area: cardsContainer;
+  /* font-family: 'open sans'; */
+  grid-area: '.card';
   background-color: #EAEAF4;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 20px;
@@ -97,9 +125,9 @@ border: 1px solid green; */
 
 
 .card-title {
-  font-family: Open Sans, Bold;
   color:#1F1F3D;
   font-size:15px;
+  font-weight: bolder;
   padding: 1em;
 }
 
@@ -116,8 +144,8 @@ border: 1px solid green; */
 }
 
 img {
-  height:30px;
-  width:30px;
+  height:25px;
+  width:25px;
 }
 
 .delete {
@@ -130,4 +158,3 @@ img {
   border-color:#1F1F3D;
   border: solid 1px;
 }
-
