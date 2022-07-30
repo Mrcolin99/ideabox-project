@@ -3,6 +3,10 @@ html {
 
 }
 
+body{
+  flex:1;
+}
+
 .white-font {
   color: #E9E9F3;
   background-color: #1F1F3D;
@@ -111,11 +115,11 @@ label {
 
 .grid {
   display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
   /* font-family: 'open sans'; */
   grid-area: '.card';
   background-color: #EAEAF4;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
 /* display:flex;
@@ -127,7 +131,8 @@ border: 1px solid green; */
 .card {
   display: flex;
   flex-direction: column;
-  width:200px;
+  min-height: 100vh;
+  max-width:200px;
 }
 
 .card-header {
