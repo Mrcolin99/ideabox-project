@@ -66,29 +66,40 @@ function clearInputs() {
 function showIdeaCards() {
   grid.innerHTML = ''
   for(var i = 0; i < ideaCards.length; i++) {
+    var starIcon = "./assets/star.svg"
+    if(ideaCards[i].starred) {
+      starIcon = "./assets/star-active.svg"
+    }
     grid.innerHTML += `
     <div class="card-header">
-      <img id="star-${ideaCards[i].id}" class="star" src="./assets/star.svg">
+      <img id="star-${ideaCards[i].id}" class="star" src=${starIcon}>
       <img id="delete-${ideaCards[i].id}" class="delete" src="./assets/delete.svg">
       <div class="card-content">
-      <div class="card-title">${ideaCards[i].title}</div>
-      <div class="card-body">${ideaCards[i].body}</div>
-      <div class="card-footer">
-        <img src="./assets/comment.svg"> Comment
+        <div class="card-title">${ideaCards[i].title}</div>
+        <div class="card-body">${ideaCards[i].body}</div>
+        <div class="card-footer">
+          <img src="./assets/comment.svg"> Comment
+        </div>
       </div>
     </div>`
   }
  }
 
 function favoriteThisCard() {
-  var newFavorite = event.target.closest('.card')
+  var favId = event.target.id
   for(var i = 0; i < ideaCards.length; i++) {
-    if (favCards.includes(newFavorite.id)) {
-      return
-    } else {favCards.push(ideaCards[i])}
+    if(favId === `star-${ideaCards[i].id}`) {
+      if(ideaCards[i].starred) {
+        // if we click on one that is starred, we want to change the starrred value to false and reset the icon state.
+        ideaCards[i].starred = false;
+        event.target.src = "./assets/star.svg"
+      } else {
+        ideaCards[i].starred = true;
+        event.target.src = "./assets/star-active.svg"
+      }
+    }
   }
   showIdeaCards()
-  console.log(favCards)
 }
 
 function deleteThisCard() {
