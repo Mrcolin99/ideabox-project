@@ -2,6 +2,7 @@
   color: #E9E9F3;
   background-color: #1F1F3D;
 }
+
 .lBlue-font {
   color: #BFBFDD
 }
@@ -11,93 +12,88 @@
 }
 
 .nav-bar {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-width: 150px;
-height: 1000px;
-float: left;
-background-color: #1F1F3D;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 150px;
+  height: 1000px;
+  float: left;
+  background-color: #1F1F3D;
 }
 
 .input-field {
-background-color: #A0AAD2;
-color: #1F1F3D;
-font-weight: bold;
+  background-color: #A0AAD2;
+  color: #1F1F3D;
+  font-weight: bold;
 }
 
 .text-alignment {
-display: flex;
-flex-direction: column;
-align-items: center;
-/* padding: 5px 300px 20px 450px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 5px 300px 20px 450px; */
 }
 
 label {
-align-self: flex-start;
+  align-self: flex-start;
 }
 
 .align-search {
-justify-content: center;
-background-image: url(assets/search.svg);
+  justify-content: center;
+  background-image: url(assets/search.svg);
 }
 
 .grid {
-display: flex;
-flex-flow:column-wrap;
-background-color: #EAEAF4;
-width: 500px;
-height: 700px;
-border: 1px solid green;
+  display: flex;
+  flex-flow: column-wrap;
+  background-color: #EAEAF4;
+  width: 500px;
+  height: 700px;
+  border: 1px solid green;
 }
 
 .save-button {
-padding: 5px 60px 5px 60px;
+  padding: 5px 60px 5px 60px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns:repeat(auto-fit, min(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, min(300px, 1fr));
   gap: 1rem;
   align-items: flex-start;
 }
 
 .card {
-  background:#FFFFFF;
-  width:200px
-
+  background: #FFFFFF;
+  width: 200px
 }
 
 .card-header {
-  background:#1F1F3D;
-  font-size:12px;
-  margin-bottom:20px;
-  display:flex;
+  background: #1F1F3D;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: flex;
 }
 
 .card-title {
-  color:#1F1F3D;
-  font-size:15px;
+  color: #1F1F3D;
+  font-size: 15px;
   padding: 1em;
 }
 
-.card-body {
+.card-body {}
 
-}
-
-.card-footer {
-
-}
+.card-footer {}
 
 img {
-  height:30px;
-  width:30px;
+  height: 30px;
+  width: 30px;
 
 }
 
 .delete {
-  align-self:flex-end;
-  color:white;
+  align-self: flex-end;
+  color: white;
   float: right;
 }
