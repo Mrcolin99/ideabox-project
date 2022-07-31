@@ -5,7 +5,7 @@ var starredIdeasButton = document.querySelector('.starredIdea')
 var titleInput = document.getElementById('idea-title')
 var bodyInput = document.getElementById('idea-body')
 var saveButton = document.querySelector('.save-button')
-var grid = document.querySelector('.card')
+var grid = document.querySelector('.grid')
 
 var searchIdeaBox = document.querySelector('.align-search')
 
@@ -16,20 +16,18 @@ var currentBody
 
 //Arrays
 var ideaCards = []
-var favCards = []
 
 //Event listeners
-bubbleParent.addEventListener('click', clickHandler)
+// bubbleParent.addEventListener('click', clickHandler)
 window.addEventListener('load', doNothing)
 titleInput.addEventListener('input', checkInputs)
 bodyInput.addEventListener('input', checkInputs)
 saveButton.addEventListener('click', saveCard)
+grid.addEventListener('click', favoriteThisCard)
+grid.addEventListener('click', deleteThisCard)
+
 
 //Event Handlers
-function clickHandler(event) {
-  if (event.target.classList.contains('star')) {favoriteThisCard()}
-  if (event.target.classList.contains('delete')) {deleteThisCard()}
-}
 
 
 
@@ -68,13 +66,16 @@ function clearInputs() {
 function showIdeaCards() {
   grid.innerHTML = ''
   for(var i = 0; i < ideaCards.length; i++) {
-    grid.innerHTML += `<div class="card-header">
-    <img class="star" src="./assets/star.svg">
-    <img class="delete" src="./assets/delete.svg">
-    <div class="card-content">
-    <div class="card-title">${ideaCards[i].title}</div>
-    <div class="card-body">${ideaCards[i].body}</div>
-    <div class="card-footer"><img src="./assets/comment.svg"> Comment</div>
+    grid.innerHTML += `
+    <div class="card-header">
+      <img id="star-${ideaCards[i].id}" class="star" src="./assets/star.svg">
+      <img id="delete-${ideaCards[i].id}" class="delete" src="./assets/delete.svg">
+      <div class="card-content">
+      <div class="card-title">${ideaCards[i].title}</div>
+      <div class="card-body">${ideaCards[i].body}</div>
+      <div class="card-footer">
+        <img src="./assets/comment.svg"> Comment
+      </div>
     </div>`
   }
  }
@@ -91,10 +92,11 @@ function favoriteThisCard() {
 }
 
 function deleteThisCard() {
-  var deletedCard = event.target.closest('.card')
+  var deletedId = event.target.id
   for(var i = 0; i < ideaCards.length; i++) {
-    ideaCards.splice(i,1)
+    if(deletedId === `delete-${ideaCards[i].id}`) {
+      ideaCards.splice(i,1)
+    }
   }
   showIdeaCards()
-  console.log(favCards)
 }

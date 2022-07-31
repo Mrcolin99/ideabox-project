@@ -61,12 +61,12 @@ body{
   /* padding: 5px 300px 20px 450px; */
 }
 
-#idea-title {
+.idea-title {
   height:25px;
   width:250px;
 }
 
-#idea-body {
+.idea-body {
   height:50px;
   width:250px;
 }
