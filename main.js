@@ -21,8 +21,10 @@ var ideaCards = []
 titleInput.addEventListener('keyup', checkInputs)
 bodyInput.addEventListener('keyup', checkInputs)
 saveButton.addEventListener('click', saveCard)
+
 grid.addEventListener('click', favoriteThisCard)
 grid.addEventListener('click', deleteThisCard)
+
 
 //Functions
 function checkInputs() {
@@ -43,6 +45,8 @@ function saveCard() {
  showIdeaCards()
  clearInputs()
  checkInputs()
+
+
 }
 
 function clearInputs() {
@@ -70,7 +74,9 @@ function showIdeaCards() {
       </div>
     </div>`
   }
- }
+  console.log(ideaCards)
+}
+
 
 function favoriteThisCard() {
   var favId = event.target.id
@@ -84,7 +90,9 @@ function favoriteThisCard() {
         event.target.src = "./assets/star-active.svg"
       }
     }
+
   }
+  // favCards.push(newFavorite)
   showIdeaCards()
 }
 
@@ -94,6 +102,8 @@ function deleteThisCard() {
     if(deletedId === `delete-${ideaCards[i].id}`) {
       ideaCards.splice(i,1)
     }
+
   }
   showIdeaCards()
 }
+
