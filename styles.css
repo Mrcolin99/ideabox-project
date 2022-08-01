@@ -32,7 +32,6 @@ body{
   align-items: flex-start;
   width: 150px;
   height: 1000px;
-  padding: 10px 0px;
   float: left;
   background-color: #1F1F3D;
 }
@@ -50,7 +49,6 @@ body{
   background-color: #A0AAD2;
   color: #1F1F3D;
   font-weight: bold;
-  border: solid red 1px;
 }
 
 .text-alignment {
@@ -107,6 +105,25 @@ label {
   background-image: url(assets/search.svg); */
   height:20px;
   width:225px;
+  /* padding: 5px 300px 20px 450px; */
+}
+
+label {
+  align-self: flex-start;
+}
+
+.align-search {
+  justify-content: center;
+  background-image: url(assets/search.svg);
+}
+
+.grid {
+  display: flex;
+  flex-flow: column-wrap;
+  background-color: #EAEAF4;
+  width: 500px;
+  height: 700px;
+  border: 1px solid green;
 }
 
 .save-button {
@@ -192,3 +209,4 @@ img {
   font-size: 12px;
 
 }
+

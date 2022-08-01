@@ -27,8 +27,8 @@ saveButton.addEventListener('click', saveCard)
 
 //Event Handlers
 function clickHandler(event) {
-  if (event.target.classList.contains('star')) {favoriteThisCard()}
-  if (event.target.classList.contains('delete')) {deleteThisCard()}
+  if (event.target.classList.contains('star')) { favoriteThisCard(event) }
+  if (event.target.classList.contains('delete')) { deleteThisCard(event) }
 }
 
 
@@ -37,7 +37,7 @@ function clickHandler(event) {
 function checkInputs() {
   if (titleInput.value === '' || bodyInput.value === '') {
     doNothing()
-  } else {enableButton()}
+  } else { enableButton() }
 }
 
 function doNothing() {
@@ -49,14 +49,14 @@ function enableButton() {
 }
 
 function saveCard() {
- currentTitle = titleInput.value
- currentBody = bodyInput.value
- var newIdea = new Idea(currentTitle, currentBody)
- event.preventDefault()
- ideaCards.push(newIdea)
- showIdeaCards()
- clearInputs()
- checkInputs()
+  currentTitle = titleInput.value
+  currentBody = bodyInput.value
+  var newIdea = new Idea(currentTitle, currentBody)
+  event.preventDefault()
+  ideaCards.push(newIdea)
+  showIdeaCards()
+  clearInputs()
+  checkInputs()
 }
 
 function clearInputs() {
@@ -67,7 +67,7 @@ function clearInputs() {
 
 function showIdeaCards() {
   grid.innerHTML = ''
-  for(var i = 0; i < ideaCards.length; i++) {
+  for (var i = 0; i < ideaCards.length; i++) {
     grid.innerHTML += `<div class="card-header">
     <img class="star" src="./assets/star.svg">
     <img class="delete" src="./assets/delete.svg">
@@ -77,24 +77,29 @@ function showIdeaCards() {
     <div class="card-footer"><img src="./assets/comment.svg"> Comment</div>
     </div>`
   }
- }
+  console.log(ideaCards)
+}
 
-function favoriteThisCard() {
+function favoriteThisCard(event) {
+  var id = event.target.id
   var newFavorite = event.target.closest('.card')
-  for(var i = 0; i < ideaCards.length; i++) {
-    if (favCards.includes(newFavorite.id)) {
-      return
-    } else {favCards.push(ideaCards[i])}
+  for (var i = 0; i < ideaCards.length; i++) {
+    if (ideaCards[i].id == id) {
+      favCards.push(ideaCards[i])
+      ideaCards.splice(i, 1)
+    } else { return }
+  }
+  // favCards.push(newFavorite)
+  showIdeaCards()
+  console.log(favCards)
+}
+
+function deleteThisCard(event) {
+  var deletedCard = event.target.closest('.card')
+  for (var i = 0; i < ideaCards.length; i++) {
+    ideaCards.splice(i, 1)
   }
   showIdeaCards()
   console.log(favCards)
 }
 
-function deleteThisCard() {
-  var deletedCard = event.target.closest('.card')
-  for(var i = 0; i < ideaCards.length; i++) {
-    ideaCards.splice(i,1)
-  }
-  showIdeaCards()
-  console.log(favCards)
-}
