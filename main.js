@@ -59,13 +59,13 @@ function showIdeaCards() {
     }
     grid.innerHTML += `
     <div class="card-header">
-      <img id="star-${ideaCards[i].id}" class="star" src=${starIcon}>
-      <img id="delete-${ideaCards[i].id}" class="delete" src="./assets/delete.svg">
+      <img id="star-${ideaCards[i].id}" class="star" src=${starIcon} alt="Star button">
+      <img id="delete-${ideaCards[i].id}" class="delete" src="./assets/delete.svg" alt="X button">
       <div class="card-content">
         <div class="card-title">${ideaCards[i].title}</div>
         <div class="card-body">${ideaCards[i].body}</div>
         <div class="card-footer">
-          <img src="./assets/comment.svg"> Comment
+          <img src="./assets/comment.svg" alt"Plus button"> Comment
         </div>
       </div>
     </div>`
